@@ -1,9 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import Stateful from './app';
 
-console.log('hello')
 
 ReactDOM.render(
-  <h1>Hello, Green Fox Academy!</h1>,
+  <Stateful />,
   document.getElementById('root'),
 );
+
