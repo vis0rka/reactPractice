@@ -1,11 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const Display = ({ counter }) => {
-  return (
-    <div> {counter} </div>
-  )
-};
+const Display = ({ counter }) => (
+  <div> {counter} </div>
+);
 
 Display.propTypes = {
   counter: PropTypes.number.isRequired

@@ -34,16 +34,14 @@ class Stateful extends Component {
     }
   };
 
-  render() {
-    return (
+  render = () => (
       <div>
         <h1>SimpleGoldenAcornApp</h1>
         <Button label="Buy One" onClick={this.increment} />
         <Display counter={this.state.count} />
         <Button label="Eat One" onClick={this.decrement} />
       </div>
-    )
-  };
+  );
 }
 
 export default Stateful;
