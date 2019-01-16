@@ -1,21 +1,18 @@
-import React from 'react';
+import React, { Component } from 'react';
 import Button from './button';
 import Display from './display';
 
-class Stateful extends React.Component {
-  constructor() {
-    super();
-    this.state = {
-      count: 0
-    }
+class Stateful extends Component {
+  state = {
+    count: 0,
   };
 
   componentDidMount = () => {
-    document.addEventListener('keydown', this.handleKeyPress);
+    document.body.addEventListener('keydown', this.handleKeyPress);
   }
 
   componentWillUnmount = () => {
-    document.removeEventListener('keydown', this.handleKeyPress);
+    document.body.removeEventListener('keydown', this.handleKeyPress);
   }
 
   increment = () => {
@@ -41,9 +38,9 @@ class Stateful extends React.Component {
     return (
       <div>
         <h1>SimpleGoldenAcornApp</h1>
-        <Button label="Buy One" onclick={this.increment} />
+        <Button label="Buy One" onClick={this.increment} />
         <Display counter={this.state.count} />
-        <Button label="Eat One" onclick={this.decrement} />
+        <Button label="Eat One" onClick={this.decrement} />
       </div>
     )
   };

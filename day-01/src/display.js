@@ -1,11 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const Display = (props) => {
+const Display = ({ counter }) => {
   return (
-    <div>
-      {props.counter}
-    </div>
+    <div> {counter} </div>
   )
 };
 

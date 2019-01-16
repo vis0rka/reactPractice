@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 const Button = (props) => {
   return (
-    <button onClick={props.onclick}>
+    <button onClick={props.onClick}>
       {props.label}
     </button>
   )
@@ -11,7 +11,7 @@ const Button = (props) => {
 
 Button.propTypes = {
   label: PropTypes.string.isRequired,
-  onclick: PropTypes.func.isRequired
+  onClick: PropTypes.func.isRequired
 };
 
 export default Button;
