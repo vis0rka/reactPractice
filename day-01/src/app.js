@@ -1,5 +1,6 @@
 import React from 'react';
-import PropTypes from 'prop-types';
+import Button from './button';
+import Display from './display';
 
 class Stateful extends React.Component {
   constructor() {
@@ -7,33 +8,27 @@ class Stateful extends React.Component {
     this.state = {
       count: 0
     }
-    this.increment = this.increment.bind(this);
-    this.decrement = this.decrement.bind(this);
-    this.handleKeyPress = this.handleKeyPress.bind(this);
   };
 
-  componentDidMount() {
+  componentDidMount = () => {
     document.addEventListener('keydown', this.handleKeyPress);
   }
-  componentWillUnmount() {
+
+  componentWillUnmount = () => {
     document.removeEventListener('keydown', this.handleKeyPress);
   }
 
-  increment() {
-    this.setState((prevState) => {
-      return { count: prevState.count + 1 }
-    });
+  increment = () => {
+    this.setState({ count: this.state.count + 1 });
   };
 
-  decrement() {
+  decrement = () => {
     if (this.state.count > 0) {
-      this.setState((prevState) => {
-        return { count: prevState.count - 1 }
-      });
+      this.setState({ count: this.state.count + -1 });
     }
   };
 
-  handleKeyPress(e) {
+  handleKeyPress = (e) => {
     if (e.keyCode == 38) {
       this.increment();
     }
@@ -53,30 +48,5 @@ class Stateful extends React.Component {
     )
   };
 }
-
-const Button = (props) => {
-  return (
-    <button onClick={props.onclick}>
-      {props.label}
-    </button>
-  )
-};
-
-const Display = (props) => {
-  return (
-    <div>
-      {props.counter}
-    </div>
-  )
-};
-
-Button.propTypes = {
-  label: PropTypes.string,
-  onclick: PropTypes.func
-};
-
-Display.propTypes = {
-  counter: PropTypes.string
-};
 
 export default Stateful;
