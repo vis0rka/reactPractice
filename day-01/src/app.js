@@ -4,7 +4,7 @@ import EatAcorn from './redux/containers/eatingAcorn';
 import DisplayAcorn from './redux/containers/displayAcorn';
 
 const App = () => (
-  <div>
+  <div className="container">
     <h1>SimpleGoldenAcornApp</h1>
     <BuyAcorn />
     <DisplayAcorn />

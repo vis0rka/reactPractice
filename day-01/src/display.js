@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 const Display = ({ counter }) => (
-  <div> <h2>{counter}</h2> </div>
+  <div className="display"> <h2>{counter}</h2> 🌰 </div>
 );
 
 Display.propTypes = {
