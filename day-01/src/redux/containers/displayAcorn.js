@@ -7,7 +7,6 @@ const mapStateToProps = (state) => {
   };
 };
 
-
 const DisplayAcorn = connect(
   mapStateToProps
 )(Display);
