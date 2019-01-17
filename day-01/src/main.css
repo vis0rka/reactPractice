@@ -28,3 +28,27 @@ button {
 button:hover {
   background-color: rgb(75, 109, 173);
 }
+
+.navigation {
+  margin-bottom:20px;
+  margin-top:5px;
+}
+
+.navigation ul{
+  display: flex;
+}
+
+.navigation ul li {
+  list-style-type:none;
+  margin-left: 15px;
+}
+
+.navigation ul li a {
+  color: firebrick;
+  font-size: 20px;
+  text-decoration: none;
+}
+
+.navigation ul li a:hover {
+  color: rgb(134, 25, 25);
+}
