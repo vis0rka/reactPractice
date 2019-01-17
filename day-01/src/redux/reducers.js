@@ -3,7 +3,7 @@ const initialState = {
   counter: 0
 }
 
-const rootReducer = (state = initialState, action) => {
+const acorns = (state = initialState, action) => {
   switch (action.type) {
     case 'EATING_ACORN':
       if (state.counter > 0) {
@@ -11,7 +11,7 @@ const rootReducer = (state = initialState, action) => {
           counter: state.counter - 1
         };
       } else {
-        break;
+        return state;
       };
     case 'BUYING_ACORN':
       return {
@@ -23,4 +23,4 @@ const rootReducer = (state = initialState, action) => {
 };
 
 
-export default rootReducer;
+export default acorns;

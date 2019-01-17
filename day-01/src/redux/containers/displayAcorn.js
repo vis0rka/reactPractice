@@ -3,7 +3,7 @@ import Display from '../../display';
 
 const mapStateToProps = (state) => {
   return {
-    counter: state.counter
+    counter: state.acorns.counter
   };
 };
 
