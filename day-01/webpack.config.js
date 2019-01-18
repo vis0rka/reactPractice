@@ -16,7 +16,11 @@ module.exports = {
             plugins: ['@babel/plugin-proposal-object-rest-spread']
           }
         }
-      }
+      },
+      {
+        test: /\.css$/,
+        use: ['style-loader', 'css-loader'],
+      },
     ],
   },
   devServer: {

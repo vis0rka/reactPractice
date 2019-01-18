@@ -1,10 +1,14 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Stateful from './app';
+import { Provider } from 'react-redux'
+import  Store  from './redux/store'
+import  App  from '../src/app'
+import '../src/main.css'
 
 ReactDOM.render(
-  <Stateful />,
-  document.getElementById('root'),
-);
-
+  <Provider store={Store}>
+    <App />
+  </Provider>,
+  document.getElementById('root')
+)
 
