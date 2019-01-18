@@ -8,18 +8,18 @@ class SinglePost extends Component {
     const post = this.props.post;
     if (post) {
       return (
-      <div className="post card" key={post.id}>
-      <div className="card-content">
-        <span className="card-title red-text">{post.title}</span>
-        <p className="">{post.body}</p>
-      </div>
-    </div> 
+        <div className="post card" key={post.id}>
+          <div className="card-content">
+            <span className="card-title red-text">{post.title}</span>
+            <p className="">{post.body}</p>
+          </div>
+        </div>
       )
     } else {
       return (
-      <div>
-        <h2>loading post</h2>
-      </div>        
+        <div>
+          <h2>loading post</h2>
+        </div>
       )
     }
   };
