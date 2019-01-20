@@ -47,7 +47,7 @@ const initialState = {
 
 const rootReducer = (state = initialState, action) => {
   console.log(action)
-  if(action.type === 'DELETE_POST') {
+  if (action.type === 'DELETE_POST') {
     let newPosts = state.posts.filter(e => {
       return action.id !== e.id
     });
@@ -56,12 +56,21 @@ const rootReducer = (state = initialState, action) => {
       posts: newPosts
     }
   }
+  if (action.type === 'ADD_POST') { 
+    let newpost = {
+      id: action.id,
+      title: action.title,
+      body: action.body
+    };
+    console.log(newpost)
+    return {
+      posts: [...state.posts, newpost]
+    }
+  }
   return state;
 };
 
-const getAllPost = () => {
-  return { type: 'GET_ALL_POST' }
-};
+
 
 
 export default rootReducer;
